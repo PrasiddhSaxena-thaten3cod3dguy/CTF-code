@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="outer-box">
+    <div class="inner-box">
+        <h3 class="fs-2 text-center mb-3">Hi Admin!</h3>
+        <form action="/ping_75b99073859f729598ffd77602970878" method="POST">
+            <div class="input-group flex-nowrap mb-3">
+                <input type="text" name="ip" class="form-control" placeholder="IP here" aria-label="IP" aria-describedby="addon-wrapping">
+            </div>
+            <button type="submit" class="btn btn-dark custom-btn">Ping me!</button>
+        </form>
+        <div class="output mt-3">
+            {% if output %}
+                {% for line in output %}
+                    {{ line }} <br>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if email %}
+<div class="alert alert-warning alert-dismissible fade show fs-4" role="alert">
+    <strong>Hey!</strong> Your email is {{ email }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+{% endif %}
+<div class="outer">
+    <div class="left">
+        <div class="left-content">
+            <h2 class="owner">Madhvi Bhabhi's</h2>
+            <h1 class="text-primary fw-bold mt-4 mb-4">Aachar Papad Shop</h1>
+            <h3 class="tagline fs-5 text-right">- <span class="text-info">Taste the world class aachar. &#128523;</span></h3>
+        </div>
+    </div>
+    <div class="right">
+        <img class="madhvi-pic" src="/static/img/madhvi-bhabhi.png" alt="Madhvi Bhide">
+    </div>
+</div>
+<div class="container">
+    <div class="mt-5 mb-5 about-us fs-4" id="about-us">
+        <h2 class="text-primary fw-bolder fs-1 mb-3">About us</h2>
+        <p >
+            Aachar papad shop is owned by Madhvi Bhide.
+        </p>
+        <p>
+            Madhvi Bhide is the wife of Atmaram Tukaram Bhide - a teacher and the one-and-only secretary of 
+            Gokuldham Society, Powdergalli, Goregaon East, Mumbai.
+        </p>
+        <p>
+            By occupation, Madhvi bhabhi is a housewife. But apart from that she also does the business of 
+            Aachar and papad.
+        </p>
+        <p>
+            She is famous for her aachar and papad, not only in the society she lives, but in the far and wide 
+            of the area.
+        </p>
+        <p>
+            Even many of the bollywood superstars come to the society just to have the aachar and papad made 
+            by Madhvi bhabhi.
+        </p>
+        <p>
+            Now you can also get those aachars and papads just by ordering them online from this site.
+        </p>
+        <img class="custom-image mt-5" src="/static/img/aachar-papad.jpg" alt="Aachar papad">
+    </div>
+
+    <div class="mt-5 mb-5 perks fs-4" id="perks">
+        <h2 class="text-primary fw-bolder fs-1 mb-3">Our perks</h2>
+        <p>
+            Let us see why you should order your next box of aachar and papad from us.
+        </p>
+        <div class="row mt-5 mb-5">
+
+            <div class="card col-lg-3 cards">
+                <img src="/static/img/sakaram.jpg" class="card-img-top" alt="Sakaram">
+                <div class="card-body">
+                  <h5 class="card-title text-primary fs-4">Delivery speed</h5>
+                  <p class="card-text">With Bhide Master's superfast sakaram, you will get orders delivered even before putting down the phone after ordering.</p>
+                </div>
+            </div>
+
+            <div class="card col-lg-3 cards">
+                <img src="/static/img/aachar-papad2.jpg" class="card-img-top" alt="Aachar papad">
+                <div class="card-body">
+                  <h5 class="card-title text-primary fs-4">Quality ingredients</h5>
+                  <p class="card-text">The ingredients for the product are choosen carefully that has no side effects on the consumer buying the products.</p>
+                </div>
+            </div>
+
+            <div class="card col-lg-3">
+                <img src="/static/img/money.jpg" class="card-img-top" alt="Paisa Paisa">
+                <div class="card-body">
+                  <h5 class="card-title text-primary fs-4">Minimum cost</h5>
+                  <p class="card-text">The products are sold at a very minimal price that you will never find in the near area. Best deals at least price.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5 mb-5 fs-4" id="testimonials">
+        <h2 class="text-primary fw-bolder fs-1 mb-3">Testimonials</h2>
+        <p class="mb-5">
+            See for yourself what our customers say about us.
+        </p>
+        <div class="testimonials">
+            <div class="testimonial mb-4">
+                <div class="photo">
+                    <div>
+                        <img class="testimonial-pic" src="/static/img/jethalal.jpg" alt="Jethalal Gada">
+                    </div>
+                </div>
+                <div class="comment">
+                    <div>
+                        <h3><span class="badge bg-secondary">Jethalal Gada</span></h3>
+                        <p>
+                        From the mouth of a Kachhi Maru, you will never forget the taste of aachar papad made by Madhvi Bhabhi.
+                        </p>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial mb-4">
+                <div class="comment">
+                    <div>
+                        <h3><span class="badge bg-secondary">Patrakar Popatlal</span></h3>
+                        <p>
+                        I wish to find a bride that is as excellent as the aachars and papads made by Madhvi Bhabhi.
+                        </p>    
+                    </div>
+                </div>
+                <div class="photo">
+                    <div>
+                        <img class="testimonial-pic" src="/static/img/popatlal.jpg" alt="Popatlal">
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial mb-4">
+                <div class="photo">
+                    <div>
+                        <img class="testimonial-pic" src="/static/img/tarak.jpg" alt="Tarak Mehta">
+                    </div>
+                </div>
+                <div class="comment">
+                    <div>
+                        <h3><span class="badge bg-secondary">Tarak Mehta</span></h3>
+                        <p>
+                        I can declare the third world war against Anjali to have the aachars and papads made by Madhvi Bhabhi.
+                        </p>    
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <div class="mt-5 mb-5 contact-us fs-4" id="contact-us">
+        <h2 class="text-primary fw-bolder fs-1 mb-3">Contact us</h2>
+        <p >
+            Give us your email and our team will reach out to you to take orders.
+        </p>
+        <form action="/email" method="POST">
+            <div class="input-group flex-nowrap mb-3">
+                <input type="email" name="email" class="form-control fs-4" placeholder="Enter your email..." aria-label="Email" aria-describedby="addon-wrapping">
+            </div>
+            <button type="submit" class="btn btn-primary fs-4 mb-3">Submit!</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

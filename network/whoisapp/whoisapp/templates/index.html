@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="outer mt-5">
+        <div class="inner">
+            <h2 class="mb-4">Get WHOIS data</h2>
+            <form action="#">
+                <div class="input-group flex-nowrap mb-3">
+                    <input type="text" name="domain" class="form-control" placeholder="Enter your domain" aria-label="Domain" aria-describedby="addon-wrapping">
+                </div>
+                <button type="submit" class="btn btn-dark center-elem">Get it!</button>
+            </form>
+
+            <div class="mt-3">
+                {% if output %}
+                    {% for line in output %}
+                        {{ line }} <br />
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

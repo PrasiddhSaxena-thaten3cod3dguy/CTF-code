@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Lato&family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.front {
+    width: 100%;
+    height: 93vh;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    width: 50%;
+    background-image: url("/static/img/master-roshi.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.front-text {
+    letter-spacing: 0.25em;
+}
+
+.quote {
+    font-family: 'Gideon Roman', cursive;
+}
+
+.techniques-img {
+    display: block;
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error-container {
+    width: 100%;
+    height: 81vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-box {
+    font-size: 500%;
+}

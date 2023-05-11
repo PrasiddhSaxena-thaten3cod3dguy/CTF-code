@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="outer-box">
+    <div class="inner-box">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-dark" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <h3 class="fw-bold fs-2 text-center">SIGNUP</h3>
+        <form action="/signup" method="POST">
+            <div class="mt-4 mb-3 input-group flex-nowrap">
+                <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+            <div class="mb-3 input-group flex-nowrap">
+                <input type="password" name="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping">
+            </div>
+            <button type="submit" class="btn btn-dark">Signup</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

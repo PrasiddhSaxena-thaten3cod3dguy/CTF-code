@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-danger" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <div class="front">
+        <div class="left text-white">
+            <p class="fs-2 front-text">Learn <span class="fs-1 text-primary">Martial Arts</span> <br> from world class trainers.</p>
+        </div>
+        <div class="right opacity-75">
+            
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5 who-are-we" id="about">
+        <h2 class="fs-1 fw-bold">Who are we?</h2>
+        <p class="fs-4 mt-4 mb-5">
+            <span class="quote fs-4">
+                "We do not learn martial arts to pick fights or to impress girls who will say "Oh beefcake, you're so strong, I want you." Heh. Muah. (does a kissing motion) Do you understand what I am saying? We must master the art of peace in addition to the art of war. We achieve victory by the art of war, victory is won through strategy, strategy is derived from the art of peace. However, if somebody evil threatens you or any other good innocent people with unethical force, it is your duty to defend!"
+            </span> - <span class="fw-bolder">Master Roshi</span>    
+        </p>
+        <p class="fs-4">
+            The Turtle School is a martial arts school founded by <span class="text-primary">Master Roshi</span> which presumably continues the teachings of Roshi's former sensei, <span class="text-primary">Master Mutaito</span>.
+        </p>
+        <p class="fs-4">
+            The first two known members of the school are <span class="text-primary">Grandpa Gohan</span> and <span class="text-primary">Ox-King</span>. Other known students of the Turtle School include <span class="text-primary">Goku</span>, <span class="text-primary">Krillin</span>, and <span class="text-primary">Yamcha</span>. The special moves which are taught to the students are the <span class="text-primary">Kamehameha</span> and <span class="text-primary">Jan Ken</span>.
+        </p>
+        <p class="fs-4">
+            Upon the completion of the student's training, Roshi would enlist them into the <span class="text-primary">World Martial Arts Tournament</span> as a test to their strength. However, he would also enlist himself under the alias as <span class="text-primary">Jackie Chun</span> in order to ensure his students do not win the championship, in order to prevent them from growing overconfident and neglect their future training.
+        </p>
+    </div>
+
+    <div class="container mt-5 mb-5 students" id="students">
+        <h2 class="fs-1 fw-bold">Our best students</h2>
+        <p class="fs-4 mt-4 mb-5">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="/static/img/grandpa-gohan1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title fs-3 fw-bold">Grandpa Gohan</h5>
+                          <p class="card-text fs-4">Grandpa Gohan is a martial artist who was Roshi's number one pupil.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="/static/img/ox-king1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title fs-3 fw-bold">Ox King</h5>
+                          <p class="card-text fs-4">Ox-King is the king of Fire Mountain.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="/static/img/goku1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title fs-3 fw-bold">Goku</h5>
+                          <p class="card-text fs-4">Goku is a Saiyan male originally sent to destroy Earth as an infant.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </p>
+    </div>
+
+    <div class="container mt-5 mb-5 techniques" id="techniques">
+        <h2 class="fs-1 fw-bold">Techniques we teach</h2>
+        <p class="fs-4 mt-4 mb-5">
+            <span class="fs-3 text-primary">Kamehameha</span> - 
+            Master Roshi's signature ki wave technique which is also considered the signature technique of the Turtle School.
+        </p>
+        <img class="techniques-img mt-5 mb-5" src="/static/img/kamehameha1.png" alt="">
+
+        <p class="fs-4 mt-4 mb-5">
+            <span class="fs-3 text-primary">Turtle Style Last Resort</span> - 
+            The most potent and powerful attack used by Master Roshi (disguised as Jackie Chun) in which he shoots a lightning blast towards the target using both hands, and traps the opponent within an electric field.
+        </p>
+        <img class="techniques-img mt-5 mb-5" src="/static/img/thunder1.jpg" alt="">
+
+        <p class="fs-4 mt-4 mb-5">
+            <span class="fs-3 text-primary">Hypnosis Technique</span> - 
+            A technique that was used by Master Roshi at the 22nd World Martial Arts Tournament against Man-Wolf. It can be used to hypnotize and control the mind of the opponent.
+        </p>
+        <img class="techniques-img mt-5 mb-5" src="/static/img/hypnosis1.png" alt="">
+
+        <p class="fs-4 mt-4 mb-5">
+            <span class="fs-3 text-primary">Jan Ken</span> - 
+            The user shouts Jan-ken, then a name corresponding to the attack. Jan-ken-gu, equals rock and will be a strong punch. Jan-ken-choki, equals scissors and will be a poke in the eyes. Jan-ken-pa, equals paper and will be an open palm strike.
+        </p>
+        <img class="techniques-img mt-5 mb-5" src="/static/img/janken1.png" alt="">
+    </div>
+
+    <div class="container mt-5 mb-5 contact" id="contact">
+        <h2 class="fs-1 fw-bold">Contact us</h2>
+        <p class="fs-4 mt-4 mb-5">Want to contact us? Fill up the form below. Our team will reach out to you.</p>
+        <div class="mb-3">
+            <label for="email" class="form-label fs-4 text-primary">Email address</label>
+            <input type="email" class="form-control fs-4" id="email" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label fs-4 text-primary">Message</label>
+            <textarea class="form-control fs-4" id="message" rows="3" placeholder="Your message"></textarea>
+          </div>
+          <button type="button" class="btn btn-dark fs-4">Submit</button>
+    </div>
+</div>
+{% endblock %}

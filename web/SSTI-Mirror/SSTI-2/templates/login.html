@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clown's Login</title>
+</head>
+<body>
+    
+    <div style="margin-top:10% ;">
+        <center>
+        <h3><b>Clown's Login Form</b></h3>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-dark" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form action="/login" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        <label>Username: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="username" placeholder="Username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Password: </label>
+                    </td>
+                    <td>
+                        <input type="password" name="password" placeholder="Password">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                    <input type="Submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
+            
+        </form>
+    </center>
+    </div>
+<!-- 
+    SomeTimes I feel People dont see my comments so i guess my secret is safe here /prayorprey is not for clowns who bruteforce things,
+    Oh Did you find it ? Who cares im sure My Mirror will show you that you are a fool!
+ -->
+</body>
+</html>

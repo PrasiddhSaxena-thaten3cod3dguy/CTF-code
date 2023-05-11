@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="outer-container">
+    <div class="inner-container-left">
+        <p class="fs-1 text-white heading-text">
+            We build the best <br>
+            <span class="heading text-primary">Dynocaps</span>
+        </p>
+    </div>
+    <div class="inner-container-right">
+        <img class="header-img" src="/static/img/dr-brief-1.jpg" alt="Dr Brief">
+    </div>
+</div>
+
+<div class="mt-5 container">
+    <div class="about-us mt-5">
+        <h2 class="fs-1 fw-bold text-primary">Who are we ?</h2>
+
+        <p class="mt-4 fs-4">
+            <span class="text-primary">Capsule Corporation</span> is a company founded in Age 712, and is run by 
+            <span class="text-primary">Dr. Brief</span>. The corporation is based around, and takes its name from, the <span class="text-primary">Hoi-Poi Capsules</span> (also known 
+            as <span class="text-primary">DynoCaps</span>) invented by Dr. Brief himself.
+        </p>
+
+        <p class="mt-4 fs-4">
+            Due to the invention and production of the extremely popular and useful <span class="text-primary">capsules</span>, 
+            the Capsule Corporation is one of the largest, richest and most influential companies in the world. At one point, the 
+            Capsule Corporation and the <span class="text-primary">Red Ribbon Army</span> front company Red Pharmaceuticals were 
+            competitive rivals in the business race, but the creation of the <span class="text-primary">DynoCaps</span> from Capsule Corporation resulted in Red 
+            Pharmaceuticals losing to it.
+        </p>
+    </div>
+
+    <div class="our-products mt-5">
+        <h2 class="fs-1 fw-bold text-primary">Our top products</h2>
+
+        <div class="row mt-3">
+
+            <div class="card col-sm-3 m-3">
+                <img src="/static/img/dynocaps.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title fs-4 fw-bold text-center text-primary">Dynocaps</h5>
+                </div>
+            </div>
+    
+            <div class="card col-sm-3 m-3">
+                <img src="/static/img/spacecrafts-1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fs-4 fw-bold text-center text-primary">Spacecrafts</h5>
+                </div>
+            </div>
+    
+            <div class="card col-sm-3 m-3">
+                <img src="/static/img/gravity-machine-1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fs-4 fw-bold text-center text-primary">Gravity machine</h5>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="testimonials mt-5 mb-5">
+        <h2 class="fs-1 fw-bold text-primary">What our customers say ?</h2>
+
+        <div class="mt-5 fs-4 testimonial-box">
+            <div class="testimonial-img">
+                <img class="img-testimonial" src="/static/img/goku-1.jpg" alt="">
+            </div>
+            <div class="testimonial-txt">
+                <h3 class="fs-3 fw-bold text-info testimonial-user">Goku <span class="badge bg-secondary fs-5">Strongest mortal</span></h3>
+                <p>
+                    "Thanks to Capsule corp for the awesome dragon radar."
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-5 fs-4 testimonial-box">
+            <div class="testimonial-img">
+                <img class="img-testimonial" src="/static/img/vegeta-1.png" alt="">
+            </div>
+            <div class="testimonial-txt">
+                <h3 class="fs-3 fw-bold text-info testimonial-user">Vegeta <span class="badge bg-secondary fs-5">Saiyan prince</span></h3>
+                <p>
+                    "The gravity machine from Capsule corp is amazing."
+                </p>
+            </div>
+        </div>
+
+        <div class="contact mt-5 fs-4">
+            <h2 class="fs-1 fw-bold text-primary">Contact us</h2>
+    
+            <div class="mt-4 mb-3">
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+            </div>
+
+            <button type="button" class="btn btn-primary">Submit</button>
+
+        </div>
+
+    </div>
+    
+</div>
+{% endblock %}

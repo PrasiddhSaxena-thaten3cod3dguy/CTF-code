@@ -1,0 +1,1 @@
+Run the 'execute.sh' to get the lab running.

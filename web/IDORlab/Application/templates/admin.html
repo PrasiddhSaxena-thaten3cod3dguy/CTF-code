@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="outer-login-box">
+    <div class="inner-login-box p-4">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-primary" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <h3 class="fs-3 fw-bold text-primary mb-4 text-center custom-header">
+            Admin Panel
+        </h3>
+        <table class="mt-5 table">
+            <thead>
+                <tr>
+                    <th>
+                        Username
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+              {% if users %}
+                {% for user in users %}
+                <tr>
+                    <td>
+                        {{ user[1] }}
+                    </td>
+                    <td>
+                      <a class="btn btn-danger" role="button" href=/admin/delete?id={{ user[0] }}>Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+              {% endif %}
+            </tbody>
+          </table>
+          <div class="mt-5">
+            <a class="btn btn-primary" href="/" role="button">Home</a>
+            <a class="btn btn-primary" href="/static/reports_gvrb/22-11-20.txt" role="button">Report</a>
+          </div>
+    </div>
+</div>
+{% endblock %}

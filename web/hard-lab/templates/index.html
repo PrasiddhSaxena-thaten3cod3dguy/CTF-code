@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="outer">
+    <div class="inner">
+        <h3 class="mb-4">Gimme a cool Dragon Ball image!</h3>
+        <form action="/" method="POST">
+            <div class="input-group flex-nowrap mb-3">
+                <input type="text" name="url" class="form-control" placeholder="Enter your URL" aria-label="URL" aria-describedby="addon-wrapping">
+            </div>
+            <button type="submit" class="btn btn-dark custom-btn mb-4">Get it!</button>
+        </form>
+        {% if name %}
+            <img class="got-image" src={{ name }} alt="Your image :)">
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

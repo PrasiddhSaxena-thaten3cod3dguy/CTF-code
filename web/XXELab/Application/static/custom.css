@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Lato&family=Montserrat&family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #c8ecff;
+    font-family: 'Gideon Roman', cursive;
+}
+
+.custom-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-inner-container {
+    background-color: white;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    letter-spacing: 0.125em;
+}
+
+.todo {
+    border-radius: 10px;
+}
+
+.todo-title {
+    letter-spacing: 0.125em;
+}
+
+.create-todo-btn {
+    text-decoration: none;
+}
+
+.custom-form-container {
+    min-width: 50%;
+}

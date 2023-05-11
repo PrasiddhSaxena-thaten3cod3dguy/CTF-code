@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="mid-outer">
+        <div class="mid-inner">
+            <img src="/static/images/unpredictable.jpg" class="image mb-3" alt="Unpredictable">
+            <form action="/" method="post">
+                <div class="input-group flex-nowrap mb-3">
+                    <input type="text" name="name" class="form-control" placeholder="Enter your name..." aria-label="Name" aria-describedby="addon-wrapping">
+                </div>
+                <button type="submit" class="btn btn-dark centered">Enter!</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
